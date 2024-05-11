@@ -55,7 +55,10 @@ export function Form() {
     const response = await fetch("http://localhost:3000/api/register", {
       method: "POST",
       body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
     });
     const responseData = await response.json();
     const validResponseData = responseSchema.safeParse(responseData);
