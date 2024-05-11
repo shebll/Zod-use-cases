@@ -123,7 +123,9 @@ export function Form() {
               disabled={isSubmitting}
             />
             <span className="text-sm text-red-600">
-              {errors[inputName] && `${errors[inputName].message}`}
+              {errors[inputName] &&
+                errors[inputName].message &&
+                `${errors[inputName].message}`}
             </span>
           </div>
         );
