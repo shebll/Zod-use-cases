@@ -52,7 +52,7 @@ export function Form() {
   });
 
   const onSubmit = async (data: formDataType) => {
-    const response = await fetch("http://localhost:3000/api/register", {
+    const response = await fetch("/api/register", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
